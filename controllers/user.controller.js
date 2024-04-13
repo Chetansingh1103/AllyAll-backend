@@ -186,7 +186,7 @@ const loginUser = async (req, res) => {
     }
 
     // checking password if its correct or not
-    const isPasswordSame = await bcrypt.compare(req.body.password, user.password)
+    const isPasswordSame = bcrypt.compare(req.body.password, user.password)
 
     if(!isPasswordSame){
         return res.status(400).send({
@@ -405,7 +405,7 @@ const updateUserDetails = async (req, res) => {
 
         }
 
-        const isPasswordSame = await bcrypt.compare(newUser.password, user.password)
+        const isPasswordSame = bcrypt.compare(newUser.password, user.password)
 
         if(!isPasswordSame){
 
