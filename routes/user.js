@@ -17,14 +17,18 @@ const {
     verifyOtp,
     checkProfileAndReturnUserDetails,
     getLoggedInUser,
-    updatePreviouslyClickedUserId ,
-    getPreviouslyClickedUserId
+    updatePreviouslyClickedUserId,
+    getPreviouslyClickedUserId,
+    refresh
 } = require('../controllers/user.controller');
 
 const app = express();
 
 // check username
 app.post('/check-username', checkUsername);
+
+// for refreshing
+app.head("/refresh", refresh)
 
 // signup user
 app.post('/signup', signupUser);

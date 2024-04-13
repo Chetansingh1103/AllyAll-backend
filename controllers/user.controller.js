@@ -949,6 +949,17 @@ const getPreviouslyClickedUserId = async ( req, res ) => {
     }
 }
 
+const refresh = async (req, res) => {
+
+    try{
+        return res.status(200).send()
+    }
+    catch(err){
+        return res.status(400).send()
+    }
+
+}
+
 
 
 
@@ -970,7 +981,8 @@ module.exports = {
     checkProfileAndReturnUserDetails,
     getLoggedInUser,
     updatePreviouslyClickedUserId,
-    getPreviouslyClickedUserId
+    getPreviouslyClickedUserId,
+    refresh
 }
 
 
