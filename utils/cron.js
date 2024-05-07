@@ -31,21 +31,8 @@ const keepBackendActive = () => {
 
     cron.schedule('*/2 * * * *', async () => {
 
-        let endpint = "https://allyall-backend.onrender.com/user/refresh";
-
-        try {
-          let response = await fetch(endpint);
-      
-          let result = await response.json();
-      
-          console.log(result)
-      
-      
-        } catch (error) {
-          console.log(error);
-        }
+        fetch("https://allyall-backend.onrender.com/user/refresh")
         
-
     },{
         scheduled: true,
         timezone: "Asia/Kolkata"
