@@ -53,7 +53,7 @@ const keepBackendActive = () => {
 
 }
 
-module.exports = { cleanUpBin, keepBackendActive }
+module.exports = { keepBackendActive }
 
 //  # ┌────────────── second (optional)
 //  # │ ┌──────────── minute

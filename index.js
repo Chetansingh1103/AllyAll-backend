@@ -10,7 +10,7 @@ const postRoutes = require("./routes/post")
 const followRoutes = require('./routes/follow')
 const likeRoutes = require('./routes/like')
 const commentRoutes = require('./routes/comment')
-const {cleanUpBin, keepBackendActive} = require('./utils/cron')
+const {keepBackendActive} = require('./utils/cron')
 
 const PORT = process.env.PORT;
 
