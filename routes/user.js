@@ -28,7 +28,7 @@ const app = express();
 app.post('/check-username', checkUsername);
 
 // for refreshing
-app.head("/refresh", refresh)
+app.get("/refresh", refresh)
 
 // signup user
 app.post('/signup', signupUser);

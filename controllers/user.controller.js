@@ -952,6 +952,9 @@ const getPreviouslyClickedUserId = async ( req, res ) => {
 const refresh = async (req, res) => {
 
     try{
+
+        const users = await User.find();
+
         return res.status(200).send()
     }
     catch(err){
